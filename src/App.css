@@ -1,38 +1,141 @@
-.App {
-  text-align: center;
+main {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: large;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+	flex: 1;
+	margin: 0.25rem 0.25rem;
+	padding: 0.35rem 0.5rem;
+	border: 0px;
+	border-radius: 0.25rem;
+	font-size: medium;
+	color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button:hover {
+	cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+input[type="text"] {
+	flex: 6;
+	box-sizing: border-box;
+	padding: 0.25rem 0.5rem;
+	margin-right: 0.25rem;
+	border-radius: 0.25rem;
+	border: 1px solid gray;
+	font-size: medium;
 }
 
-.App-link {
-  color: #61dafb;
+section {
+	margin-top: 7.5vh;
+	width: 35vw;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 0.5rem;
+	box-shadow: 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.2), 0 0.25rem 1rem 0 rgba(0, 0, 0, 0.19);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media only screen and (max-width: 800px) {
+	section {
+		width: 70vw;
+	}
 }
+
+.add-todo,
+.edit-todo {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.todo-list {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: 0.5rem;
+}
+
+.todo-container {
+	width: 100%;
+	margin-bottom: 0.75rem;
+	border-bottom: 1px solid gray;
+}
+
+.todo {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.todo div:nth-child(1) {
+	flex: 4;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-start;
+	overflow-x: hidden;
+}
+
+.todo div:nth-child(2) {
+	flex: 2;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.completed-todo {
+	text-decoration: line-through;
+}
+
+.add-todo-button {
+	background-color: #10b981;
+}
+
+.add-todo-button:hover {
+	background-color: #16a34a;
+}
+
+.edit-todo-button {
+	background-color: #06b6d4;
+}
+
+.edit-todo-button:hover {
+	background-color: #0891b2;
+}
+
+.delete-todo-button {
+	background-color: #ef4444;
+}
+
+.delete-todo-button:hover {
+	background-color: #dc2626;
+}
+
+.select-todo-button {
+	background-color: #3b82f6;
+}
+
+.select-todo-button:hover {
+	background-color: #2563eb;
+}
+
+.deselect-todo-button {
+	background-color: #737373;
+}
+
+.deselect-todo-button:hover {
+	background-color: #525252;
+}
+
